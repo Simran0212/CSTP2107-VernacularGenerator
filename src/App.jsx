@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Menu from './menu'
 import Dashboard from './dashboard'
 import Settings from './settings'
+import Login from './login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +16,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Login />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/menu" element={<Menu />} />
         </Routes>
