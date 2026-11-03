@@ -1,5 +1,4 @@
 import React from 'react'
-import {signInWithEmailAndPassword} from 'firebase/auth'
 
 function login(){
   const buttonClickDashboard = (e) =>{
