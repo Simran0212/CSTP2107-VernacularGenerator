@@ -1,8 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function login(){
+
+  const navigate = useNavigate();
+
   const buttonClickDashboard = (e) =>{
-    Navigate("/dashboard");
+    navigate("/dashboard");
 
   }
   return (
