@@ -1,8 +1,11 @@
 import React from 'react'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 
+function login(){
+  const buttonClickDashboard = (e) =>{
+    Navigate("/dashboard");
 
-const login = () => {
+  }
   return (
     <div>
       <h1>Login Page</h1>
@@ -15,11 +18,10 @@ const login = () => {
           <label> Password: </label>
           <input type="password" placeholder="Enter password"/>
         </div>
-        <button type="submit">Log In</button>
+        <button type="submit" onClick={buttonClickDashboard}>Log In</button>
       </form>
     </div>
 
   )
 }
-
 export default login
