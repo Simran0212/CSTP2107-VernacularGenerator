@@ -218,9 +218,8 @@
 
 .dashboard-header {
   padding-right: 10px;
-  border-color: white;
-  border-style: solid;
-  border-left: 1px;
+  border:0;
+  border-bottom: 1px solid white;
   align-self: flex-start;
   width: 100%;
   display: flex;
