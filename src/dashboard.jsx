@@ -13,7 +13,7 @@ const dashboard = () => {
           <div className="search-container">
             <SearchBar />
           </div>
-          <div className="search-container">
+          <div className="profile-container">
             <a className="profileLink" href="/profile">Profile</a>
           </div>
         </div>

@@ -213,7 +213,7 @@
   align-items: left;
 }
 
-.search-container {
+.search-container, .profile-container {
   flex: none;
 }
 
