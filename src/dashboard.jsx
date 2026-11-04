@@ -9,7 +9,7 @@ const dashboard = () => {
         <Menu />
       </div>
       <div className="page-content">
-        <div className="dashboard-header">
+        <div className="page-header">
           <div className="search-container">
             <SearchBar />
           </div>

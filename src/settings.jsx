@@ -1,8 +1,27 @@
 import React from 'react'
+import Menu from './menu'
+import SearchBar from './searchbar'
 
 const settings = () => {
   return (
-    <div>settings</div>
+    <div className="page-container">
+      <div className="menu-container">
+        <Menu />
+      </div>
+      <div className="page-content">
+        <div className="page-header">
+          <div className="search-container">
+            <SearchBar />
+          </div>
+          <div className="profile-container">
+            <a className="profileLink" href="/profile">Profile</a>
+          </div>
+        </div>
+        <div>
+          <p>Settings</p>
+        </div>
+      </div>
+    </div>
   )
 }
 
