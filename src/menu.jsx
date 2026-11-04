@@ -5,16 +5,14 @@ import React from 'react'
 
 const menu = () => {
   return (
-    <nav>
-        // Replace this with a proper logo for the app
-        <image src={viteLogo} alt="Vite Logo" />
-        <ul>
-            // Replace with icon buttons instead of text buttons
-            <li><a href="/">Dashboard</a></li>
-            <li><a href="/settings">Settings</a></li>
-            <li><a href="/create">Create</a></li>
-        </ul>
+    <>
+    <nav class="menu">
+        <div>Logo</div>
+        <div class="menu-item">Dashboard</div>
+        <div class="menu-item">Settings</div>
+        <div class="menu-item">Create</div>
     </nav>
+    </>
   )
 }
 
