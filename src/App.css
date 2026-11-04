@@ -183,7 +183,7 @@
   }
 }
 
-.menu {
+.menu-container {
   height: 100vh; /* 100% Full-height */
   min-width: 250px; 
   display:inline-block;
@@ -203,13 +203,14 @@
   display: block;
 }
 
-.dashboard-content {
+.page-content {
   width: 100%;
 }
 
-.dashboard-container {
+.page-container {
   box-sizing: border-box;
   display: flex;
+  align-items: left;
 }
 
 .search-container {

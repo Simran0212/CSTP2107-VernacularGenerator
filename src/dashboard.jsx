@@ -4,11 +4,11 @@ import SearchBar from './searchbar'
 
 const dashboard = () => {
   return (
-    <div className="dashboard-container">
-      <div>
+    <div className="page-container">
+      <div className="menu-container">
         <Menu />
       </div>
-      <div className="dashboard-content">
+      <div className="page-content">
         <div className="dashboard-header">
           <div className="search-container">
             <SearchBar />
