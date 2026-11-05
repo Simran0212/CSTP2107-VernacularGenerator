@@ -1,15 +1,13 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword} from 'firebase/auth';
-import {auth} from ".../firebase.config";
+import {auth} from "./firebase.config";
 
-function login(){
-
+function Login(){
+ const [loginData, setLoginData] = useState({});
   const navigate = useNavigate();
-  const [loginData, setLoginData] = useState({});
-  
-  const buttonClickDashboard = (e) =>{
-    navigate("/dashboard");
+
+
   const handleEmail = (event) => {
     setLoginData({
       ...loginData,
@@ -47,11 +45,11 @@ function login(){
       <form>
         <div>
           <label for="email"> Email: </label>
-          <input type="text" placeholder="Enter email"/>
+          <input type="text" placeholder="Enter email" onChange={handleEmail}/>
         </div>
           <div>
           <label for="password"> Password: </label>
-          <input type="password" placeholder="Enter password"/>
+          <input type="password" onChange={handlePassword} placeholder="Enter password"/>
         </div>
         <button type="submit" onClick={handleSubmit}>Log In</button>
       </form>
@@ -59,5 +57,5 @@ function login(){
 
   )
 }
-}
-export default login
+
+export default Login
