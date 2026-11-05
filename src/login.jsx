@@ -1,12 +1,44 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { signInWithEmailAndPassword} from 'firebase/auth';
+import {auth} from ".../firebase.config";
 
 function login(){
 
   const navigate = useNavigate();
-
+  const [loginData, setLoginData] = useState({});
+  
   const buttonClickDashboard = (e) =>{
     navigate("/dashboard");
+  const handleEmail = (event) => {
+    setLoginData({
+      ...loginData,
+      email: event.target.value
+    })
+  }
+
+  const handlePassword = (event) => {
+    setLoginData({
+      ...loginData,
+      password: event.target.value
+    })
+  }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    try {
+      const user = await signInWithEmailAndPassword(auth, loginData.email, loginData.password);
+      if(user) {
+        alert('User Logged in Successfully');
+        navigate('/dashboard');
+      }
+      } catch (error){
+        console.log(error.code)
+        if(error.code === 'auth/invalid-credential'){
+          alert('Incorrect password or user does not exist');
+        }
+    }
+
 
   }
   return (
@@ -14,17 +46,18 @@ function login(){
       <h1>Login Page</h1>
       <form>
         <div>
-          <label> Email: </label>
+          <label for="email"> Email: </label>
           <input type="text" placeholder="Enter email"/>
         </div>
           <div>
-          <label> Password: </label>
+          <label for="password"> Password: </label>
           <input type="password" placeholder="Enter password"/>
         </div>
-        <button type="submit" onClick={buttonClickDashboard}>Log In</button>
+        <button type="submit" onClick={handleSubmit}>Log In</button>
       </form>
     </div>
 
   )
+}
 }
 export default login
