@@ -1,3 +1,62 @@
+.login {
+    display: flex;
+    flex-direction: row;
+
+ 
+    align-items: stretch;
+    width: 850px;
+    height: 400px;
+    margin: 40px auto;
+    overflow:hidden;
+    background-color: #fcfbf7;
+
+}
 .leftHand {
-    align-items: start;
+    display: flex;
+    flex: 1;
+    padding: 40px;
+    text-align:center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #F8FAFC;
+
+}
+
+.leftHand h1 {
+    color:#b91c1c;
+    font-size: 40px;
+
+}
+
+.rightHand {
+    flex: 1;
+    display: flex;
+    text-align:center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #F8FAFC;
+}
+
+.leftHand p {
+    color: #4b5563;
+
+}
+
+.leftHand button{
+  background-color: #15803D;
+  border-color: #15803D;
+
+}
+.rightHand button{
+  background-color: #1D4ED8;
+  border-color: #1D4ED8;
+
+}
+
+.rightHand h2 {
+    color: #1E293B;
+}
+.rightHand label {
+    color: #1E293B;
 }
