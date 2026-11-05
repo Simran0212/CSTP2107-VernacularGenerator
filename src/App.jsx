@@ -8,6 +8,7 @@ import Menu from './menu'
 import Dashboard from './dashboard'
 import Settings from './settings'
 import Login from './login'
+import Signup from './signup'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/" element={<Signup />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/menu" element={<Menu />} />
