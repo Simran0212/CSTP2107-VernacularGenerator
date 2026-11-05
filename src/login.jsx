@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword} from 'firebase/auth';
 import {auth} from "./firebase.config";
+import "./login.css"
 
 function Login(){
  const [loginData, setLoginData] = useState({});
@@ -40,10 +41,15 @@ function Login(){
 
   }
   return (
-    <div>
+  <div className='leftHand'>
+    <h1>Login Page</h1>
+  </div>
+
+    /*<div>
       <h1>Login Page</h1>
+      </div>
+      <div>
       <form>
-        <div>
           <label for="email"> Email: </label>
           <input type="text" placeholder="Enter email" onChange={handleEmail}/>
         </div>
@@ -54,7 +60,7 @@ function Login(){
         <button type="submit" onClick={handleSubmit}>Log In</button>
       </form>
     </div>
-
+*/
   )
 }
 
