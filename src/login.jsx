@@ -8,6 +8,10 @@ function Login(){
  const [loginData, setLoginData] = useState({});
   const navigate = useNavigate();
 
+  const handleSignup = (e) => {
+      navigate('/signup');
+  }
+
 
   const handleEmail = (event) => {
     setLoginData({
@@ -37,14 +41,34 @@ function Login(){
           alert('Incorrect password or user does not exist');
         }
     }
-
-
   }
   return (
+  <div className="login">
   <div className='leftHand'>
-    <h1>Login Page</h1>
+    <h1>Welcome to Vernaculator Generator</h1>
+    <h2>Don't have an account?</h2>
+    <button name="signUp" onChange={handleSignup}>Sign Up</button>
   </div>
+  <div className="rightHand">
+    <h2>Sign In</h2>
+    <form>
+      <div>
+       <label for="email"> Email </label>
+       <br></br>
+          <input type="text" placeholder="Enter email" onChange={handleEmail}/>
+    </div>
+    <div>
+      <br></br>
+          <label for="password"> Password </label>
 
+    <br></br>
+          <input type="password" onChange={handlePassword} placeholder="Enter password"/>
+        </div>
+  <br></br>
+        <button name="submit" onClick={handleSubmit}>Log In</button>
+    </form>
+  </div>
+</div>
     /*<div>
       <h1>Login Page</h1>
       </div>
