@@ -27,7 +27,7 @@
 
 .leftHand h1 {
     color:#1E293B;
-    font-size: 40px;
+    font-size: 50px;
 
 }
 
@@ -53,6 +53,9 @@
   background-color: #15803D;
   border-color: #15803D;
   color:antiquewhite;
+  max-width: 100px;
+  margin-left: 350px;
+  
 
 }
 .rightHand button{
@@ -61,9 +64,14 @@
   color:antiquewhite;
 
 }
+.rightHand h1 {
+      color:#1E293B;
+    font-size: 50px;
+}
 
 .rightHand h2 {
     color: #1E293B;
+    font-size: larger;
 }
 .rightHand label {
     color: #1E293B;
