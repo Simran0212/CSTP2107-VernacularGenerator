@@ -9,6 +9,8 @@ function Login(){
   const navigate = useNavigate();
 
   const handleSignup = (e) => {
+    e.preventDefault();
+    console.log("button clicked");
       navigate('/signup');
   }
 
@@ -43,14 +45,16 @@ function Login(){
     }
   }
   return (
+  <div className="login-full-screen">
   <div className="login">
   <div className='leftHand'>
+
     <h1>Welcome to Vernaculator Generator</h1>
     <h2>Don't have an account?</h2>
-    <button name="signUp" onChange={handleSignup}>Sign Up</button>
+    <button name="signUp" onClick={handleSignup}>Sign Up</button>
   </div>
   <div className="rightHand">
-    <h2>Sign In</h2>
+    <h1>Sign In</h1>
     <form>
       <div>
        <label for="email"> Email </label>
@@ -69,22 +73,8 @@ function Login(){
     </form>
   </div>
 </div>
-    /*<div>
-      <h1>Login Page</h1>
-      </div>
-      <div>
-      <form>
-          <label for="email"> Email: </label>
-          <input type="text" placeholder="Enter email" onChange={handleEmail}/>
-        </div>
-          <div>
-          <label for="password"> Password: </label>
-          <input type="password" onChange={handlePassword} placeholder="Enter password"/>
-        </div>
-        <button type="submit" onClick={handleSubmit}>Log In</button>
-      </form>
-    </div>
-*/
+</div>
+    
   )
 }
 
