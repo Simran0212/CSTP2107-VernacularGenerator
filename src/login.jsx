@@ -49,7 +49,7 @@ function Login(){
   <div className="login">
   <div className='leftHand'>
 
-    <h1>Welcome to Vernaculator Generator</h1>
+    <h1 className='title'>Welcome to Vernaculator Generator</h1>
     <h2>Don't have an account?</h2>
     <button name="signUp" onClick={handleSignup}>Sign Up</button>
   </div>
@@ -57,16 +57,16 @@ function Login(){
     <h1>Sign In</h1>
     <form>
       <div>
-       <label for="email"> Email </label>
+       <label for="email" className='email'> Email </label>
        <br></br>
-          <input type="text" placeholder="Enter email" onChange={handleEmail}/>
+          <input type="text" className='enterEmail' placeholder="Enter email" onChange={handleEmail}/>
     </div>
     <div>
       <br></br>
-          <label for="password"> Password </label>
+          <label for="password" className='password'> Password </label>
 
     <br></br>
-          <input type="password" onChange={handlePassword} placeholder="Enter password"/>
+          <input type="password"  className='enterPassword' onChange={handlePassword} placeholder="Enter password"/>
         </div>
   <br></br>
         <button name="submit" onClick={handleSubmit}>Log In</button>
