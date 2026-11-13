@@ -48,20 +48,20 @@ const Signup = () => {
     <h1>Sign Up</h1>
     <form>
       <div>
-       <label for="email"> Email </label>
+       <label for="email" className='email'> Email </label>
        <br></br>
-          <input type="text" placeholder="Enter email" onChange={handleEmail}/>
+          <input type="text" placeholder="Enter email" className="enterEmail" onChange={handleEmail}/>
     </div>
     <div>
       <br></br>
-          <label for="password"> Password </label>
+          <label for="password" className='password'> Password </label>
 
     <br></br>
-          <input type="password" onChange={handlePassword} placeholder="Enter password"/>
+          <input type="password" className="enterPassword" onChange={handlePassword} placeholder="Enter password"/>
         </div>
   <br></br>
         <button name="submit" onClick={handleSubmit}>Sign Up</button>
-  <p>Already have an account? <Link to={'/'} href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</Link> </p>
+  <p className='accountMade'>Already have an account? <Link to={'/'} href="#">Login here</Link> </p>
     </form>
   </div>
 </div>
