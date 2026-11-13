@@ -49,7 +49,7 @@ function Login(){
   <div className="login">
   <div className='leftHand'>
 
-    <h1 className='title'>Welcome to Vernaculator Generator</h1>
+    <h1>Welcome to Vernaculator Generator</h1>
     <h2>Don't have an account?</h2>
     <button name="signUp" onClick={handleSignup}>Sign Up</button>
   </div>
