@@ -7,7 +7,6 @@
     width: 100%;
     height: 400px;
     margin: 0;
-  
 }
 
 
@@ -26,8 +25,8 @@
 .leftHand h1 {
     color:#1E293B;
     font-size: 100px;
-   font-family: "Bonheur Royale", cursive;
-   margin-top: 100px;
+    font-family: "Bonheur Royale", cursive;
+    margin-top: 100px;
 }
 .leftHand h2 {
     color:#1E293B;
