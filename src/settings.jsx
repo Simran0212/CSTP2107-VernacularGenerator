@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from './menu'
-import SearchBar from './searchbar'
+import SearchBar from "./searchBar";
 
 const settings = () => {
   return (
