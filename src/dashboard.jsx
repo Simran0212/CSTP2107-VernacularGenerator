@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from './menu'
-import SearchBar from './searchBar'
+import SearchBar from "./searchBar";
 
 const dashboard = () => {
   return (
