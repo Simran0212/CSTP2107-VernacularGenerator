@@ -45,35 +45,20 @@ function Login(){
     }
   }
   return (
-  <div className="login-full-screen">
-  <div className="login">
-  <div className='leftHand'>
-
-    <h1>Welcome to Vernaculator Generator</h1>
-    <h2>Don't have an account?</h2>
-    <button name="signUp" onClick={handleSignup}>Sign Up</button>
-  </div>
-  <div className="rightHand">
-    <h1>Sign In</h1>
-    <form>
-      <div>
-       <label for="email" className='email'> Email </label>
-       <br></br>
-          <input type="text" className='enterEmail' placeholder="Enter email" onChange={handleEmail}/>
+  <div className="login-screen-container">
+    <div className="background">
+      <div className="shape"></div>
+      <div className="shape"></div>
     </div>
-    <div>
-      <br></br>
-          <label for="password" className='password'> Password </label>
-
-    <br></br>
-          <input type="password"  className='enterPassword' onChange={handlePassword} placeholder="Enter password"/>
-        </div>
-  <br></br>
-        <button name="submit" onClick={handleSubmit}>Log In</button>
-    </form>
-  </div>
-</div>
-</div>
+  <form onSubmit={handleSubmit}>
+        <h3>Login Here</h3>
+  <label htmlFor="email">Email</label>
+  <input type="text" placeholder="Email" id="email" onChange={handleEmail} />
+  <label htmlFor="password">Password</label>
+  <input type="password" placeholder="Password" id="password" onChange={handlePassword} />
+  <button type="submit">Log In</button>
+  </form>
+    </div>
     
   )
 }
