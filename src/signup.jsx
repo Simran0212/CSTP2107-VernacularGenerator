@@ -48,30 +48,25 @@ const Signup = () => {
     }
 
     return (
-        <div className='signup-full-screen'>
-        <div className="signup-container">
- <div className="signUp">
-    <h1>Sign Up</h1>
-    <form>
-      <div>
-       <label for="email" className='email'> Email </label>
+        <div className='signup-screen-container'>
+        <div className="background">
+        <div className="shape"></div>
+        <div className="shape"></div>  
+        <div className="shape"></div>
+        </div>
+  <form>
+       <label htmlFor="email">Email</label>
        <br></br>
-          <input type="text" placeholder="Enter email" className="enterEmail" onChange={handleEmail}/>
-    </div>
-    <div>
+         <input type="text" placeholder="Email" id="email" onChange={handleEmail} />
       <br></br>
-          <label for="password" className='password'> Password </label>
-
+          <label htmlFor="password">Password</label>
     <br></br>
-          <input type="password" className="enterPassword" onChange={handlePassword} placeholder="Enter password"/>
-        </div>
+          <input type="password" placeholder="Password" id="password" onChange={handlePassword} />
   <br></br>
         <button name="submit" onClick={handleSubmit}>Sign Up</button>
   <p className='accountMade'>Already have an account? <Link to={'/'} href="#">Login here</Link> </p>
     </form>
   </div>
-</div>
-</div>
     )
 }
 

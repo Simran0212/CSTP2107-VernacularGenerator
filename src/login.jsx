@@ -64,6 +64,7 @@ function Login(){
 
   <button type="submit" onClick={handleSubmit}>Log In</button>
   <br></br>
+  <br></br>
   <p>Don't have an account? Sign up!</p>
   <br></br>
      <button name="signUp" onClick={handleSignup}>Sign Up</button>
