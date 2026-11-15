@@ -11,16 +11,16 @@ const menu = () => {
     navigate("/settings");
   }
   const buttonClickCreate = (e) =>{
-    navigate("/genBoard");
+    navigate("/createBoard");
   }
   
   return (
     <>
     <nav className="menu">
-        <div>Logo</div>
+        <a href="/" className="menu-item">Logo</a>
         <a href="/dashboard" className="menu-item">Dashboard</a>
         <a href="/settings" className="menu-item">Settings</a>
-        <a href="/genBoard" className="menu-item">Create</a>
+        <a href="/create-board" className="menu-item">Create</a>
     </nav>
     </>
   )
