@@ -48,6 +48,7 @@ function Login(){
   <div className="login-screen-container">
     <div className="background">
       <div className="shape"></div>
+      <div className="shape"></div>  
       <div className="shape"></div>
     </div>
   <form onSubmit={handleSubmit}>
