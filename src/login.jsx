@@ -55,10 +55,15 @@ function Login(){
     <h1>Welcome to Vernacular Generator</h1>
     <br></br>
     <h2>Login</h2>
+    <br></br>
   <label htmlFor="email">Email</label>
+  <br></br>
   <input type="text" placeholder="Email" id="email" onChange={handleEmail} />
+  <br></br>
   <label htmlFor="password">Password</label>
+  <br></br>
   <input type="password" placeholder="Password" id="password" onChange={handlePassword} />
+  <br></br>
   <button type="submit">Log In</button>
   </form>
     </div>
