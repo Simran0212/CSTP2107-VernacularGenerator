@@ -34,6 +34,7 @@ const Signup = () => {
                 navigate('/');
             }
         } catch (error) {
+            alert(error);
             console.log(error.code)
             if (error.code === 'auth/email-already-in-use') {
                 alert('User already exists, use a different email');
