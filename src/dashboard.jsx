@@ -1,6 +1,7 @@
 import React from 'react'
 import Menu from './menu'
 import SearchBar from "./searchBar";
+import WordsDisplay from './wordsDisplay';
 
 const dashboard = () => {
   return (
@@ -17,8 +18,8 @@ const dashboard = () => {
             <a className="profileLink" href="/profile">Profile</a>
           </div>
         </div>
-        <div>
-          <p>Dashboard</p>
+        <div className="wordDisplay-Container">
+          <WordsDisplay />
         </div>
       </div>
     </div>

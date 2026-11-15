@@ -1,8 +1,8 @@
 import React from 'react'
 // i.	Word + Definition using imput fields
-const SingleWord = (word, definition) => {
+const SingleWord = ( {word, definition } ) => {
   return (
-    <div>
+    <div className="word-box">
       <h3>{word}</h3>
       <p>{definition}</p>
     </div>
