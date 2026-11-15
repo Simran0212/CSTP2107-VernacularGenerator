@@ -9,14 +9,14 @@
 }
 
 body {
-    background-color: #080710;
+    background-color:  #202020;
 }
 
 .login-screen-container {
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-color: #080710;
+    background-color:  #202020;
     overflow: hidden;
 }
 .background {
@@ -64,7 +64,7 @@ body {
 form {
     min-height: 520px;
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.13);
+    background-color:#505050;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -93,4 +93,17 @@ label {
     margin-top: 20px;
     font-size: 16px;
     font-weight: 500;
+}
+
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color:#505050;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
 }
