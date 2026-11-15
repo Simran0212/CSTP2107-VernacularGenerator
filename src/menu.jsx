@@ -16,11 +16,11 @@ const menu = () => {
   
   return (
     <>
-    <nav class="menu">
+    <nav className="menu">
         <div>Logo</div>
-        <a href="/dashboard" class="menu-item">Dashboard</a>
-        <a href="/settings" class="menu-item">Settings</a>
-        <a href="/genBoard" class="menu-item">Create</a>
+        <a href="/dashboard" className="menu-item">Dashboard</a>
+        <a href="/settings" className="menu-item">Settings</a>
+        <a href="/genBoard" className="menu-item">Create</a>
     </nav>
     </>
   )
