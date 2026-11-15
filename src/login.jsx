@@ -51,10 +51,9 @@ function Login(){
       <div className="shape"></div>  
       <div className="shape"></div>
     </div>
-  <form onSubmit={handleSubmit}>
+  <form>
     <h1>Welcome to Vernacular Generator</h1>
     <br></br>
-    <h2>Login</h2>
     <br></br>
   <label htmlFor="email">Email</label>
   <br></br>
@@ -68,7 +67,7 @@ function Login(){
   <input type="password" placeholder="Password" id="password" onChange={handlePassword} />
   <br></br>
   <br></br>
-  <button type="submit">Log In</button>
+  <button type="submit" onClick={handleSubmit}>Log In</button>
   </form>
     </div>
     
