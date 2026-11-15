@@ -18,7 +18,18 @@ const settings = () => {
           </div>
         </div>
         <div>
-          <p>Settings</p>
+          <h1>Settings</h1>
+          <p>
+            <ul>
+              <li>Change password</li>
+              <li>Change email</li>
+              <li>Change username</li>
+              <li>Change profile picture</li>
+              <li>Change theme</li>
+            </ul>
+            <br/>
+            Need to decide on what other settings to impliment as a group.
+          </p>
         </div>
       </div>
     </div>
