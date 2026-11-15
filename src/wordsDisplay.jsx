@@ -19,11 +19,21 @@ const wordsDisplay = () => {
         <SingleWord word="demo" definition="This is a demo definition." />
         <SingleWord word="trial" definition="This is a trial definition." />
         <SingleWord word="prototype" definition="This is a prototype definition." />
+        <SingleWord word="test" definition="This is a test definition." />
+        <SingleWord word="sample" definition="This is a sample definition." />
+        <SingleWord word="demo" definition="This is a demo definition." />
+        <SingleWord word="trial" definition="This is a trial definition." />
+        <SingleWord word="prototype" definition="This is a prototype definition." />
       </div>
       <div className="words-column">
         <SingleWord word="mockup" definition="This is a mockup definition." />
         <SingleWord word="illustration" definition="This is an illustration definition." />
         <SingleWord word="representation" definition="This is a representation definition." />
+        <SingleWord word="test" definition="This is a test definition." />
+        <SingleWord word="sample" definition="This is a sample definition." />
+        <SingleWord word="demo" definition="This is a demo definition." />
+        <SingleWord word="trial" definition="This is a trial definition." />
+        <SingleWord word="prototype" definition="This is a prototype definition." />
       </div>
     </div>
   )

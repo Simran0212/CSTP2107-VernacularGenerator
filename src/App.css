@@ -185,26 +185,30 @@
 
 .menu-container {
   height: 100vh; /* 100% Full-height */
-  min-width: 250px; 
+  width: 100px; 
   display:inline-block;
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
-  left: 0;
+  left: 0; /* Stay on the left side */
   background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
+  height: 100vmax; /* Full height */
+  position: fixed; /* Stay in place */ 
+  overflow-x: hidden; /*  Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
+  text-wrap: break-word;
 }
 
 .menu-item, .profileLink {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 15px;
   color: #818181;
   display: block;
 }
 
 .page-content {
-  width: 100%;
+  position: absolute;
+  left: 100px; /* Same as the width of the sidenav */
 }
 
 .page-container {
@@ -214,10 +218,13 @@
 }
 
 .search-container, .profile-container {
+   
   flex: none;
 }
 
 .page-header {
+  position:sticky;
+  top:0; 
   padding-right: 10px;
   border:0;
   border-bottom: 1px solid white;
@@ -226,6 +233,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  background-color: var(--black);
 }
 
 .dashboard-header a {
@@ -237,29 +245,40 @@
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
-  column-gap: 20px;
+  grid-template-rows: masonry;
+  flex-direction: row;
+  margin: 0 auto;
+  column-gap: 40px;
   align-items: center top;
   justify-content: center;
   min-height: 100vh; /* smallest height it can go else add scroll */
+  display: inline-grid;
 }
 
 .words-Container {
   display: flex;
   flex-direction: row;
-  margin: 0px 30px;
+  margin: 0px 20px;
+  break-inside: avoid-column;
+  page-break-inside: avoid;
 }
 
 
 .word-column{
   display: flex;
   flex-direction: column;
-  width: 32.5%;
+  padding: 0px 20px;
+  width: 32%;
 }
 
 .word-box {
-  width: 100%;
+  text-wrap: break-word;
+  width: 80%;
   padding: 10px;
+  display:inline-block;
   break-inside: avoid-column;
+  margin: 10px 0px;
   border-radius: 40px;
+  box-shadow: 1px 1px 2px 1px rgba(255, 255, 255, 0.2);
+  padding: 20px;
 }
