@@ -1,0 +1,55 @@
+:root {
+  color-scheme: light dark;
+
+  --black: #202020;
+  --white: #F1F1F1;
+  --grey: #505050;
+
+  --light-red: #E39693;
+  --red: #C72D28;
+  --light-green: #BCD9AA;
+  --green: #7AB355;
+  --light-blue: #8FA6C4;
+  --blue: #1F4E88;
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.element {
+  color: light-dark(var(--black), var(--white));
+  background-color: light-dark(var(--white), var(--black));
+}
+
+.button-red {
+  color: light-dark(var(--black), var(--white));
+  background-color: light-dark(var(--light-red), var(--red));
+}
+
+.button-green {
+  color: light-dark(var(--black), var(--white));
+  background-color: light-dark(var(--light-green), var(--green));
+}
+
+.button-blue {
+  color: light-dark(var(--black), var(--white));
+  background-color: light-dark(var(--light-blue), var(--blue));
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: var(--grey);
+    --text-h: var(--white);
+    --bg: var(--black);
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+}
