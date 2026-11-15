@@ -1,5 +1,5 @@
 import React from 'react'
-import SingleWord from './SingleWord'
+import SingleWord from "./singleWord";
 
 // takes a list of single words from import and turns it into a list of SingleWord components for display
 // You can use this: https://dev.to/okonkwomandy/the-easiest-way-to-build-the-pinterest-layout-without-using-a-framework-3i0g
