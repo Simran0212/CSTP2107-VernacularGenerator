@@ -63,6 +63,8 @@ function Login(){
   <input type="password" placeholder="Password" id="password" onChange={handlePassword} />
 
   <button type="submit" onClick={handleSubmit}>Log In</button>
+  <p>Don't have an account? Sign up!</p>
+     <button name="signUp" onClick={handleSignup}>Sign Up</button>
   </form>
     </div>
     
