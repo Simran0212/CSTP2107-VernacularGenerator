@@ -37,8 +37,8 @@ body {
 
 .shape:nth-child(1) {
     background: linear-gradient(
-        #1845ad,
-        #23a2f6
+        #1F4E88,
+        #8FA6C4
     );
     left: -80px;
     top: -80px;
@@ -46,8 +46,8 @@ body {
 .shape:nth-child(2) {
     background: linear-gradient(
         to right,
-        #11998e,
-        #38ef7d
+        #7AB355,
+        #BCD9AA
     );
     right: -30px;
     bottom: -80px;
@@ -55,8 +55,8 @@ body {
 
 .shape:nth-child(3) {
     background: linear-gradient(
-        #ff416c,
-        #ff4b2b
+        #C72D28,
+        #E39693
     );
     right: -90px;
     bottom: -50px;
