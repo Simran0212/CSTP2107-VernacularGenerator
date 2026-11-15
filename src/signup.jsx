@@ -39,6 +39,12 @@ const Signup = () => {
             if (error.code === 'auth/email-already-in-use') {
                 alert('User already exists, use a different email');
             }
+             if (error.code === 'auth/weak-password') {
+                alert('Password is too weak, try again');
+            }
+               if (error.code === 'auth/weak-password') {
+                alert('Password is too weak, try again');
+            }
         }
     }
 
