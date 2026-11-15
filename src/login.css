@@ -59,7 +59,7 @@ body {
         #ff4b2b
     );
     right: -90px;
-     bottom: -50px;
+    bottom: -50px;
 }
 form {
     min-height: 520px;
@@ -75,4 +75,12 @@ form {
     box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
     padding: 40px 35px;
     z-index: 2;
+}
+
+form * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
 }
