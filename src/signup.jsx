@@ -46,6 +46,8 @@ const Signup = () => {
             }
             else if(error.code === 'auth/invalid-email'){
                 setErrorMessage('Invalid email, please enter a valid email');
+            } else if(error.code === 'auth/admin-restricted-operation'){
+                setErrorMessage('Enter email and password');
             }
             else {
                 setErrorMessage('Failed to sign up, please try again later');
@@ -71,9 +73,11 @@ const Signup = () => {
           <input type="password" placeholder="Password" id="password" onChange={handlePassword} />
   <br></br>
   <br></br>
-        <p className='errorMessage'>test</p>
+        <p className='errorMessage'>{errorMessage}</p>
       <br></br>
-        <button name="submit" onClick={handleSubmit}>Sign Up</button>
+        <button className='submitButton' name="submit" onClick={handleSubmit}>Sign Up</button>
+  <br></br>
+  <br></br>
   <p className='accountMade'>Already have an account? <Link to={'/'} href="#">Login here</Link> </p>
     </form>
   </div>

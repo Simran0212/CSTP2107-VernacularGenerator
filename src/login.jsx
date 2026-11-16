@@ -65,11 +65,11 @@ function Login(){
   <label htmlFor="password">Password</label>
 
   <input type="password" placeholder="Password" id="password" onChange={handlePassword} />
-
+  <br></br>
+   <p className='errorMessage'>{errorMessage}</p>
+  <br></br>
   <button type="submit" onClick={handleSubmit}>Log In</button>
   <br></br>
-  <br></br>
-   <p className='errorMessage'>test</p>
   <br></br>
   <p>Don't have an account? <Link to={'/signup'} href="#">Sign Up</Link></p>
   <br></br>
