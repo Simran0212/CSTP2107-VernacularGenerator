@@ -55,6 +55,7 @@ const Signup = () => {
         <div className="shape"></div>
         </div>
   <form>
+    <h1>Sign Up</h1>
        <label htmlFor="email">Email</label>
        <br></br>
          <input type="text" placeholder="Email" id="email" onChange={handleEmail} />

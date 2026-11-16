@@ -6,6 +6,7 @@ import "./login.css"
 
 function Login(){
  const [loginData, setLoginData] = useState({});
+ const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
   const handleSignup = (e) => {
@@ -20,6 +21,7 @@ function Login(){
       ...loginData,
       email: event.target.value
     })
+    setErrorMessage('');
   }
 
   const handlePassword = (event) => {
@@ -27,20 +29,22 @@ function Login(){
       ...loginData,
       password: event.target.value
     })
+    setErrorMessage('');
   }
   const handleSubmit = async (event) => {
     event.preventDefault();
   
+    setErrorMessage('');
     try {
       const user = await signInWithEmailAndPassword(auth, loginData.email, loginData.password);
       if(user) {
-        alert('User Logged in Successfully');
+        //alert('User Logged in Successfully');
         navigate('/dashboard');
       }
       } catch (error){
         console.log(error.code)
         if(error.code === 'auth/invalid-credential'){
-          alert('Incorrect password or user does not exist');
+          setErrorMessage('Incorrect password or email');
         }
     }
   }
