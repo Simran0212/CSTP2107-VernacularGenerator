@@ -39,13 +39,16 @@ const Signup = () => {
         } catch (error) {
             console.log(error.code)
             if (error.code === 'auth/email-already-in-use') {
-                setErrorMessage('User already exists, use a different email');
+                setErrorMessage('User already exists, please use a different email');
             }
             else if (error.code === 'auth/weak-password') {
                 setErrorMessage('Password is too weak, try again');
             }
+            else if(error.code === 'auth/invalid-email'){
+                setErrorMessage('Invalid email, please enter a valid email');
+            }
             else {
-                setErrorMessage(`Error: ${error.code}`);
+                setErrorMessage('Failed to sign up, please try again later');
             }
         }
     }

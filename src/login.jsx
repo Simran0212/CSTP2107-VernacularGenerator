@@ -36,9 +36,15 @@ function Login(){
         navigate('/dashboard');
       }
       } catch (error){
-        console.log(error.code)
-        if(error.code === 'auth/invalid-credential'){
+        //console.log(error.code)
+        if(error.code === 'auth/invalid-credential' || 'auth/wrong-password' || 'auth/user-not-found'){
           setErrorMessage('Incorrect password or email');
+        }
+        else if(error.code === 'auth/invalid-email'){
+          setErrorMessage('Invalid email, please enter a valid email');
+        }
+        else {
+            setErrorMessage('Failed to login, please try again later');
         }
     }
   }
