@@ -9,12 +9,6 @@ function Login(){
  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
-  const handleSignup = (e) => {
-    e.preventDefault();
-    console.log("button clicked");
-      navigate('/signup');
-  }
-
 
   const handleEmail = (event) => {
     setLoginData({
@@ -68,11 +62,12 @@ function Login(){
 
   <button type="submit" onClick={handleSubmit}>Log In</button>
   <br></br>
-   <p className='errorMessage'>{errorMessage}</p>
   <br></br>
-  <p>Don't have an account? Sign up!</p>
+   <p className='errorMessage'>test</p>
   <br></br>
-     <button name="signUp" onClick={handleSignup}>Sign Up</button>
+  <p>Don't have an account? <Link to={'/signup'} href="#">Sign Up</Link></p>
+  <br></br>
+
   </form>
     </div>
     
