@@ -8,12 +8,14 @@ const Signup = () => {
 
     const [signupData, setSignupData] = useState({});
     const navigate = useNavigate();
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleEmail = (event) => {
         setSignupData({
             ...signupData,
             email: event.target.value
         })
+        setErrorMessage('');
     }
 
     const handlePassword = (event) => {
@@ -21,28 +23,29 @@ const Signup = () => {
             ...signupData,
             password: event.target.value
         })
+        setErrorMessage('');
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+        setErrorMessage('');
         try {
             const user = await createUserWithEmailAndPassword(auth, signupData.email, signupData.password);
             if (user) {
-                alert('User Created Succesfully');
+                //alert('User Created Succesfully');
                 // Navigate the user to login page
                 navigate('/');
             }
         } catch (error) {
             console.log(error.code)
             if (error.code === 'auth/email-already-in-use') {
-                alert('User already exists, use a different email');
+                setErrorMessage('User already exists, use a different email');
             }
             else if (error.code === 'auth/weak-password') {
-                alert('Password is too weak, try again');
+                setErrorMessage('Password is too weak, try again');
             }
             else {
-                alert(`Error: ${error.code}`);
+                setErrorMessage(`Error: ${error.code}`);
             }
         }
     }
