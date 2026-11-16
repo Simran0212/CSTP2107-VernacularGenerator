@@ -67,6 +67,8 @@ const Signup = () => {
     <br></br>
           <input type="password" placeholder="Password" id="password" onChange={handlePassword} />
   <br></br>
+        <p className='errorMessage'>{errorMessage}</p>
+      <br></br>
         <button name="submit" onClick={handleSubmit}>Sign Up</button>
   <p className='accountMade'>Already have an account? <Link to={'/'} href="#">Login here</Link> </p>
     </form>

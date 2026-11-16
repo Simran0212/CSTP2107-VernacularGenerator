@@ -68,6 +68,7 @@ function Login(){
 
   <button type="submit" onClick={handleSubmit}>Log In</button>
   <br></br>
+   <p className='errorMessage'>{errorMessage}</p>
   <br></br>
   <p>Don't have an account? Sign up!</p>
   <br></br>
