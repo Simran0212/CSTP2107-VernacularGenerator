@@ -11,6 +11,7 @@ import Settings from './settings'
 import Login from './login'
 import Signup from './signup'
 import CreateBoard from './createBoard'
+import Profile from './profile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/create-board" element={<CreateBoard />} /> 
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </>

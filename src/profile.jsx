@@ -1,4 +1,6 @@
 import React from 'react'
+import Menu from './menu'
+import SearchBar from "./searchBar";
 
 const profile = () => {
   return (

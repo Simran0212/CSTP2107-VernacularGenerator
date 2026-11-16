@@ -1,5 +1,8 @@
 import React from 'react'
-// page for generating board with imported file
+import Menu from './menu'
+import SearchBar from "./searchBar";
+// page for creating new board or 
+// generating board with imported file
 
 const genBoard = () => {
   return (
