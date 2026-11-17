@@ -3,8 +3,9 @@ import Menu from './menu'
 import SearchBar from "./searchBar";
 import {auth} from "./firebase.config";
 import {db} from "./firebase.config";
-import  { useState, useEffect } from 'react'
+import  { useState, useEffect } from 'react';
 import { doc, getDoc, collection, query, where, getDocs } from "firebase/firestore";
+import {onAuthStateChanged} from 'firebase/auth';
 
 function profile() {
   const [userData, setuserData] = useState(null);
