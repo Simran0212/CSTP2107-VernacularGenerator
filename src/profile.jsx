@@ -7,7 +7,7 @@ import  { useState, useEffect } from 'react';
 import { doc, getDoc, collection, query, where, getDocs } from "firebase/firestore";
 import {onAuthStateChanged} from 'firebase/auth';
 
-function profile() {
+function Profile() {
   const [userData, setuserData] = useState(null);
   const [boardNumber, setboardNumber] = useState(0);
   const [pinNumber, setpinNumber] = useState(0);
@@ -15,7 +15,7 @@ function profile() {
 
   useEffect( ()=> {
       const userProfile = onAuthStateChanged(auth, async (currentUser) => 
-      {
+        {
         if(currentUser){
           try{
             const docRef = doc(db, "users", currentUser.uid);
@@ -43,7 +43,7 @@ function profile() {
             setpageState(false);
           }
         });
-        userProfile();
+        return () => userProfile();
       }, []);
       if(pageState){
         return <p>Profile is Loading..</p>;
@@ -65,14 +65,19 @@ function profile() {
         </div>
         <div>
           <h1>Profile</h1>
+            <br></br>
           <div className="profile">
           <div className="profilePhoto-container">
-            <img src = {userData?.photoURL} alt = "Profile"></img>
+            <img src = {userData?.photoURL} alt = "Profile photo does not exist"></img>
+            <br></br>
+            <br></br>
           <p>{userData?.displayName || auth.currentUser?.email}</p>
+            <br></br>
           </div>
           <ul>
-            <li>Number of Boards: {boardsSize}</li>
-            <li>Number of Pins: {pinSize}</li>
+            <li>Number of Boards: {boardNumber}</li>
+              <br></br>
+            <li>Number of Pins: {pinNumber}</li>
           </ul>
           </div>
         </div>
@@ -81,4 +86,4 @@ function profile() {
   )
 }
 
-export default profile
+export default Profile
