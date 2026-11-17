@@ -13,21 +13,20 @@ function profile() {
   const [pageState, setpageState] = useState(true);
 
   useEffect( ()=> {
-      const userProfile = async () => 
-      { 
-        const user = auth.currentUser
-        if(user){
+      const userProfile = onAuthStateChanged(auth, async (currentUser) => 
+      {
+        if(currentUser){
           try{
-            const docRef = doc(db, "users", user.uid);
+            const docRef = doc(db, "users", currentUser.uid);
             const docSnap = await getDoc(docRef);
             if(docSnap.exists()){
                 setuserData(docSnap.data())
             }
-            const boardsQuery = query(collection(db, "boards"), where("userId", "==", user.uid));
+            const boardsQuery = query(collection(db, "boards"), where("userId", "==", currentUser.uid));
             const boardsSize = await getDocs(boardsQuery);
             setboardNumber(boardsSize.size);
 
-            const pinsQuery = query(collection(db, "pins"), where("userId", "==", user.uid));
+            const pinsQuery = query(collection(db, "pins"), where("userId", "==", currentUser.uid));
             const pinSize = await getDocs(pinsQuery);
             setpinNumber(pinSize.size);
 
@@ -38,8 +37,11 @@ function profile() {
             setpageState(false);
           }
         }
-
-        };
+          else
+          {
+            setpageState(false);
+          }
+        });
         userProfile();
       }, []);
       if(pageState){
@@ -65,7 +67,7 @@ function profile() {
           <div className="profile">
           <div className="profilePhoto-container">
             <img src = {userData?.photoURL} alt = "Profile"></img>
-          <p>{userData?.displayName || auth.user?.email}</p>
+          <p>{userData?.displayName || auth.currentUser?.email}</p>
           </div>
           <ul>
             <li>Number of Boards: {boardsSize}</li>
