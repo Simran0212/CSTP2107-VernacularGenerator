@@ -190,7 +190,7 @@
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0; /* Stay on the left side */
-  background-color: #111; /* Black*/
+  background-color: light-dark(#e2e2e2, #111); /* Theme-aware */
   height: 100vmax; /* Full height */
   position: fixed; /* Stay in place */ 
   overflow-x: hidden; /*  Disable horizontal scroll */
@@ -202,7 +202,7 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 15px;
-  color: #818181;
+  color: light-dark(var(--grey), #818181);
   display: block;
 }
 
@@ -227,13 +227,13 @@
   top:0; 
   padding-right: 10px;
   border:0;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid light-dark(var(--black), var(--white));
   align-self: flex-start;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  background-color: var(--black);
+  background-color: light-dark(var(--white), var(--black));
 }
 
 .dashboard-header a {
@@ -279,6 +279,11 @@
   break-inside: avoid-column;
   margin: 10px 0px;
   border-radius: 40px;
-  box-shadow: 1px 1px 2px 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 1px 1px 2px 1px light-dark(rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.2));
   padding: 20px;
+}
+
+body {
+  color: light-dark(var(--black), var(--white));
+  background-color: light-dark(var(--white), var(--black));
 }
