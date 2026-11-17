@@ -1,8 +1,18 @@
 import React from 'react'
 import Menu from './menu'
 import SearchBar from "./searchBar";
+import { useState } from 'react'
+import { applyTheme, getSavedTheme } from './theme'
 
 const settings = () => {
+
+  const [selectedTheme, setSelectedTheme] = useState(getSavedTheme());
+
+const handleThemeChange = (event) => {
+  setSelectedTheme(event.target.value);
+  applyTheme(event.target.value);
+};
+
   return (
     <div className="page-container">
       <div className="menu-container">
@@ -19,6 +29,12 @@ const settings = () => {
         </div>
         <div>
           <h1>Settings</h1>
+          <label htmlFor="theme-select">Theme: </label>
+          <select id="theme-select" value={selectedTheme} onChange={handleThemeChange}>
+            <option value="system">System default</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
           <p>
             <ul>
               <li>Change password</li>
