@@ -1,8 +1,51 @@
 import React from 'react'
 import Menu from './menu'
 import SearchBar from "./searchBar";
+import {auth} from "./firebase.config";
+import {db} from "./firebase.config";
+import  { useState, useEffect } from 'react'
+import { doc, getDoc, collection, query, where, getDocs } from "firebase/firestore";
 
-const profile = () => {
+function profile() {
+  const [userData, setuserData] = useState(null);
+  const [boardNumber, setboardNumber] = useState(0);
+  const [pinNumber, setpinNumber] = useState(0);
+  const [pageState, setpageState] = useState(true);
+
+  useEffect( ()=> {
+      const userProfile = async () => 
+      { 
+        const user = auth.currentUser
+        if(user){
+          try{
+            const docRef = doc(db, "users", user.uid);
+            const docSnap = await getDoc(docRef);
+            if(docSnap.exists()){
+                setuserData(docSnap.data())
+            }
+            const boardsQuery = query(collection(db, "boards"), where("userId", "==", user.uid));
+            const boardsSize = await getDocs(boardsQuery);
+            setboardNumber(boardsSize.size);
+
+            const pinsQuery = query(collection(db, "pins"), where("userId", "==", user.uid));
+            const pinSize = await getDocs(pinsQuery);
+            setpinNumber(pinSize.size);
+
+          } catch(error){
+              console.log(error);
+          }
+          finally {
+            setpageState(false);
+          }
+        }
+
+        };
+        userProfile();
+      }, []);
+      if(pageState){
+        return <p>Profile is Loading..</p>;
+      }
+    
   return (
     <div className="page-container">
       <div className="menu-container">
@@ -19,15 +62,16 @@ const profile = () => {
         </div>
         <div>
           <h1>Profile</h1>
-          <p>
-            <ul>
-              <li>Profile photo</li>
-              <li>Number of Boards</li>
-              <li>Number of Pins</li>
-            </ul>
-            <br/>
-            Need to decide on what other profile items to add as a group.
-          </p>
+          <div className="profile">
+          <div className="profilePhoto-container">
+            <img src = {userData?.photoURL} alt = "Profile"></img>
+          <p>{userData?.displayName || auth.user?.email}</p>
+          </div>
+          <ul>
+            <li>Number of Boards: {boardsSize}</li>
+            <li>Number of Pins: {pinSize}</li>
+          </ul>
+          </div>
         </div>
       </div>
     </div>
