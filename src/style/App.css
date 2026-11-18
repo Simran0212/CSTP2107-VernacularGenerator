@@ -209,6 +209,9 @@
 .page-content {
   position: absolute;
   left: 100px; /* Same as the width of the sidenav */
+  margin: 0;
+  padding: 0;
+  width: calc(100% - 100px); /* Full width minus the width of the sidenav */
 }
 
 .page-container {
@@ -218,7 +221,6 @@
 }
 
 .search-container, .profile-container {
-   
   flex: none;
 }
 
@@ -243,7 +245,6 @@
 .wordDisplay-Container {
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
   display: flex;
   grid-template-rows: masonry;
   flex-direction: row;
@@ -286,4 +287,19 @@
 body {
   color: light-dark(var(--black), var(--white));
   background-color: light-dark(var(--white), var(--black));
+}
+
+input[type=file] {
+  display: block;
+  margin: 10px 0px;
+}
+
+.page-body {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  min-height: 100vh; /* smallest height it can go else add scroll */
 }
