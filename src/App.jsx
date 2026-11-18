@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import './style/root.css'
+import './style/createBoard.css'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Menu from './menu'
 import Dashboard from './dashboard'

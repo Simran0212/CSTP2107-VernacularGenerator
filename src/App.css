@@ -187,7 +187,7 @@
   height: 100vh; /* 100% Full-height */
   width: 100px; 
   display:inline-block;
-  z-index: 1; /* Stay on top */
+  z-index: 2; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0; /* Stay on the left side */
   background-color: light-dark(#e2e2e2, #111); /* Theme-aware */
