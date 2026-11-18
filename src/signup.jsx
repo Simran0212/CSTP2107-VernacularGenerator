@@ -2,7 +2,7 @@ import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { auth } from './firebase.config';
-import "./signup.css"
+import "./style/login.css"
 
 const Signup = () => {
 
@@ -56,26 +56,26 @@ const Signup = () => {
     }
 
     return (
-        <div className='signup-screen-container'>
+        <div className='login-screen-container'>
         <div className="background">
         <div className="shape"></div>
         <div className="shape"></div>  
         <div className="shape"></div>
         </div>
-  <form>
+  <form className='log-form'>
     <h1>Sign Up</h1>
-       <label htmlFor="email">Email</label>
+       <label className="log-label" htmlFor="email">Email</label>
        <br></br>
-         <input type="text" placeholder="Email" id="email" onChange={handleEmail} />
+         <input className="log-input" type="text" placeholder="Email" id="email" onChange={handleEmail} />
       <br></br>
-          <label htmlFor="password">Password</label>
+          <label className="log-label" htmlFor="password">Password</label>
     <br></br>
-          <input type="password" placeholder="Password" id="password" onChange={handlePassword} />
+          <input className="log-input" type="password" placeholder="Password" id="password" onChange={handlePassword} />
   <br></br>
   <br></br>
         <p className='errorMessage'>{errorMessage}</p>
       <br></br>
-        <button className='submitButton' onClick={handleSubmit}>Sign Up</button>
+        <button className='submitButton' onClick={handleSubmit}>Sign Up</button>
   <br></br>
   <br></br>
   <p className='accountMade'>Already have an account? <Link to={'/'} href="#">Login here</Link> </p>

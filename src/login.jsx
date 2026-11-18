@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword} from 'firebase/auth';
 import {auth} from "./firebase.config";
-import "./login.css"
+import "./style/login.css"
 
 function Login(){
  const [loginData, setLoginData] = useState({});
@@ -48,23 +48,23 @@ function Login(){
         }
     }
   }
-  return (
+  return (
   <div className="login-screen-container">
     <div className="background">
       <div className="shape"></div>
       <div className="shape"></div>  
       <div className="shape"></div>
     </div>
-  <form className="login-form">
+  <form className="log-form">
     <h1>Welcome to Vernacular Generator</h1>
 
-  <label className="login-label" htmlFor="email">Email</label>
+  <label className="log-label" htmlFor="email">Email</label>
 
-  <input className="login-input" type="text" placeholder="Email" id="email" onChange={handleEmail} />
+  <input className="log-input" type="text" placeholder="Email" id="email" onChange={handleEmail} />
   
-  <label className="login-label" htmlFor="password">Password</label>
+  <label className="log-label" htmlFor="password">Password</label>
 
-  <input className="login-input" type="password" placeholder="Password" id="password" onChange={handlePassword} />
+  <input className="log-input" type="password" placeholder="Password" id="password" onChange={handlePassword} />
   <br></br>
    <p className='errorMessage'>{errorMessage}</p>
   <br></br>
@@ -76,8 +76,8 @@ function Login(){
 
   </form>
     </div>
-    
-  )
+  
+  )
 }
 
 export default Login
