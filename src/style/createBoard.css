@@ -1,0 +1,11 @@
+.brief {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: light-dark(var(--white), var(--black));
+    color: light-dark(var(--black), var(--white));
+    padding: 10px;
+    border-bottom: 1px solid light-dark(var(--black), var(--white));
+    z-index: 5;
+}

@@ -4,13 +4,23 @@ import SearchBar from "./searchBar";
 // page for creating new board or 
 // generating board with imported file
 
-const genBoard = () => {
+
+
+const createBoard = () => {
   return (
+    <>
+    
     <div className="page-container">
+      
       <div className="menu-container">
         <Menu />
       </div>
       <div className="page-content">
+        <div className="brief" id="board-brief">
+          <h3>What's a Board?</h3>
+          <p>You can create a collection of words that you think is fitting for a piece you are writing, or a character.</p>
+          <button onClick={() => { document.getElementById('board-brief').style.visibility = "hidden" }}>Okay</button>
+        </div>
         <div className="page-header">
           <div className="search-container">
             <SearchBar />
@@ -21,11 +31,16 @@ const genBoard = () => {
         </div>
         <div>
           <h1>Create Board</h1>
-          <p>Create a board by importing a file or create a new one from scratch by choosing your selected preferences and browsing with those filters in the explore section.</p>
+          <form action="" method="post" encType="text/plain">
+            <input type="file" id="fileInput" name="fileInput" accept=".doc, .txt" />
+            <button type="submit">Import File</button>
+          </form>
+          <button>Create from Scratch</button>
         </div>
       </div>
     </div>
+    </>
   )
 }
 
-export default genBoard
+export default createBoard
