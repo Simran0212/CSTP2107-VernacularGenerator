@@ -55,16 +55,16 @@ function Login(){
       <div className="shape"></div>  
       <div className="shape"></div>
     </div>
-  <form>
+  <form className="login-form">
     <h1>Welcome to Vernacular Generator</h1>
 
-  <label htmlFor="email">Email</label>
+  <label className="login-label" htmlFor="email">Email</label>
 
-  <input type="text" placeholder="Email" id="email" onChange={handleEmail} />
+  <input className="login-input" type="text" placeholder="Email" id="email" onChange={handleEmail} />
   
-  <label htmlFor="password">Password</label>
+  <label className="login-label" htmlFor="password">Password</label>
 
-  <input type="password" placeholder="Password" id="password" onChange={handlePassword} />
+  <input className="login-input" type="password" placeholder="Password" id="password" onChange={handlePassword} />
   <br></br>
    <p className='errorMessage'>{errorMessage}</p>
   <br></br>
