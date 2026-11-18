@@ -103,3 +103,9 @@ input {
     font-weight: 300;
     color: #ffffff;
 }
+.login {
+    color:#F1F1F1;
+    background-color: #505050;
+    height: 30px;
+    width: 50px;
+}

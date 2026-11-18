@@ -75,7 +75,7 @@ const Signup = () => {
   <br></br>
         <p className='errorMessage'>{errorMessage}</p>
       <br></br>
-        <button className='submitButton' name="submit" onClick={handleSubmit}>Sign Up</button>
+        <button className='submitButton' onClick={handleSubmit}>Sign Up</button>
   <br></br>
   <br></br>
   <p className='accountMade'>Already have an account? <Link to={'/'} href="#">Login here</Link> </p>
