@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import './style/App.css'
 import './style/root.css'
 import './style/createBoard.css'
 
