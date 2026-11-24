@@ -1,4 +1,4 @@
-
+import Menu from './menu'
 import {auth} from "./firebase.config";
 import { updatePassword } from 'firebase/auth';
 import { useRef } from 'react';
