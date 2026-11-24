@@ -69,6 +69,7 @@ function changePassword() {
               <br></br>
               <button className="changeEmail">Change email</button>  
               <br></br>
+              <br></br>
             <ul>
               <li>Change username</li>
               <li>Change profile picture</li>
