@@ -13,7 +13,7 @@ function CreatePassword() {
          const user = auth.currentUser;
          const passwordChanged = password.current.value;
          try  {
-            updatePassword(user, passwordChanged);
+              await updatePassword(user, passwordChanged);
            alert("Password has been changed");
            password.current.value = "";
             navigate('/settings');
