@@ -68,6 +68,7 @@ function changePassword() {
              </div>
               <br></br>
            <div className="emailChangeContainer">
+               <br></br>
               <button className="changeEmail">Change email</button>              
             <ul>
               <li>Change username</li>
@@ -79,6 +80,6 @@ function changePassword() {
         </div>
   )
 }
-
+     }
 
 export default settings
