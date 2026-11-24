@@ -28,7 +28,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/create-board" element={<CreateBoard />} />
           <Route path="/profile" element={<Profile />} />
-            <Route path="/createpassword" element={<CreatePassword />} />
+          <Route path="/create-password" element={<CreatePassword />} />
         </Routes>
       </BrowserRouter>
     </>
