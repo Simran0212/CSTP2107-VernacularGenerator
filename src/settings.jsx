@@ -67,8 +67,9 @@ function changePassword() {
               <button className="changePassword" onClick={changePassword}>Change password</button>
              </div>
               <br></br>
-              <ul>
-              <li>Change email</li>
+           <div className="emailChangeContainer">
+              <button className="changeEmail">Change email</button>              
+            <ul>
               <li>Change username</li>
               <li>Change profile picture</li>
               </ul>
