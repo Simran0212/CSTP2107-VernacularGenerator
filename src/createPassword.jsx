@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 
 function CreatePassword() {
-       const navigate = useNavigate();
       const password = useRef(null);
+       const navigate = useNavigate();
        const handlePasswordChange = async (event) => {
          event.preventDefault();
          const user = auth.currentUser;
