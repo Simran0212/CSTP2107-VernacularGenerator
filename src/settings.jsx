@@ -79,7 +79,7 @@ function changePassword() {
       </div>
         </div>
   )
-}
+
      }
 
 export default settings
