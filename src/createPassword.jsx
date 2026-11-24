@@ -2,9 +2,11 @@ import Menu from './menu'
 import {auth} from "./firebase.config";
 import { updatePassword } from 'firebase/auth';
 import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 function CreatePassword() {
+       const navigate = useNavigate();
       const password = useRef(null);
        const handlePasswordChange = async (event) => {
          event.preventDefault();
@@ -14,6 +16,7 @@ function CreatePassword() {
             updatePassword(user, passwordChanged);
            alert("Password has been changed");
            password.current.value = "";
+            navigate('/settings');
          } catch (error){
            console.log(error);
            if(error.code === 'auth/requires-recent-login') {
