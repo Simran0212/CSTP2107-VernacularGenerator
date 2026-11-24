@@ -1,115 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
 
-*,
-*:before,
-*:after {
-    padding: 0;
+
+* {
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
 }
+
 
 .login-screen-container {
     width: 100vw;
     height: 100vh;
-    position: relative;
-    background-color:  #202020;
-    overflow: hidden;
-}
-.background {
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
+    background: linear-gradient(#8FA6C4 0%, #BCD9AA 50%, #E39693 100%);
+    /*background: linear-gradient(#1F4E88 0%, #7AB355 50%, #C72D28 100%);*/
+    display: flex;
+    /*centers the card into middle*/
+    justify-content: center; /*horizontally*/
+    align-items: center;/*vertically*/
+
+
 }
 
-.background .shape {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
 
-.shape:nth-child(1) {
-    background: linear-gradient(
-        #1F4E88,
-        #8FA6C4
-    );
-    left: -80px;
-    top: -80px;
-}
-.shape:nth-child(2) {
-    background: linear-gradient(
-        to right,
-        #7AB355,
-        #BCD9AA
-    );
-    right: -90px;
-    top: 60px;
-}
 
-.shape:nth-child(3) {
-    background: linear-gradient(
-        #C72D28,
-        #E39693
-    );
-    right: -90px;
-    bottom: -50px;
-}
+
+
 
 .log-form {
-    min-height: 620px;
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.13);
+    /*background-color:rgba(24, 24, 24, 0.152);*/
+    background-color:rgba(255, 255, 255, 0.181);
+    padding-left: 10px;
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    /*Border-radius gives it the rounded shape*/
     border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-    padding: 40px 35px;
-    z-index: 2;
+    padding: 40px;
+    /* Padding gives it the form shape*/
+
+
 }
+
 
 .log-form * {
     font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-    letter-spacing: 0.5px;
+    color: #3f3f3f;
+    /*color: #d9d9d9;*/
     outline: none;
     border: none;
 }
+
 
 .log-form h1 {
     font-weight: 500;
     text-align: center;
 }
 
+
 .log-label {
-    display: block;
-    margin-top: 20px;
     font-size: 16px;
     font-weight: 500;
 }
 
+
 .log-input {
-    display: block;
     height: 50px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.07);
+    background-color: rgba(255, 255, 255);
     border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
     font-size: 14px;
+    text-align: left;
     font-weight: 300;
-    color: #ffffff;
+    color: #202020;
+   
 }
 
-.login {
-    color:#F1F1F1;
-    background-color: #505050;
+
+.login, .submitButton {
+    color:#3f3f3f;
+    /*background-color: #9a9898;*/
+    background-color: #c6c6c6;
     height: 30px;
-    width: 50px;
+    width: 100%
 }
+.theme {
+    background-color: #ffffff00;
+    width: 30px;
+    height: 30px;
+    font-size: large;
+}
+
+
+.theme:hover, .login{
+    cursor: pointer;
+}
+
+
