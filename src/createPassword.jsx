@@ -8,7 +8,6 @@ function CreatePassword() {
       const password = useRef(null);
        const handlePasswordChange = async (event) => {
          event.preventDefault();
-         console.log(password.current.value);
          const user = auth.currentUser;
          const passwordChanged = password.current.value;
          try  {
@@ -21,7 +20,7 @@ function CreatePassword() {
              alert("Error encountered, please log out and then log in to change password");
            }
            else {
-             alert('Error encountered, please try again' +  error.message);
+             alert('Error encountered, please try again ' +  error.message);
            }
          }
        }
