@@ -8,10 +8,11 @@ export const getBoards = () => {
   }
 };
 
-export const addBoard = (boardName) => {
+export const addBoard = (boardName, words = []) => {
   const newBoard = {
     id: crypto.randomUUID(),
     name: boardName.trim(),
+    words,
     wordIds: [],
   };
   const updatedBoards = [...getBoards(), newBoard];
