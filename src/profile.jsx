@@ -63,7 +63,7 @@ function Profile() {
             <img src = {userData?.photoURL} alt = "Profile photo does not exist"></img>
             <br></br>
             <br></br>
-          <p>{auth.currentUser?.email}</p>
+          <p>{userData?.displayName}</p>
             <br></br>
           </div>
           <ul>
