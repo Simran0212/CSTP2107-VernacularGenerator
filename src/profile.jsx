@@ -19,7 +19,7 @@ function Profile() {
         if(currentUser){
             setboardNumber(0);
             setpinNumber(0);
-
+        }
    } catch(error){
               console.log(error);
           }
