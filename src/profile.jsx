@@ -38,13 +38,8 @@ function Profile() {
             setpageState(false);
           }
         }
-          else
-          {
-            setpageState(false);
-          }
         });
         return () => userProfile();
-      }, []);
       if(pageState){
         return <p>Profile is Loading..</p>;
       }
