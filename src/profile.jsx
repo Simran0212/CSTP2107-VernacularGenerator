@@ -13,10 +13,9 @@ function Profile() {
   const [pinNumber, setpinNumber] = useState(0);
 
    useEffect( ()=> {
-      const userProfile = async () => 
+      const userProfile = onAuthStateChanged(auth, async (currentUser) => 
       { 
-        const user = auth.currentUser
-        if(user){
+        if(currentUser){
           try{
             const docRef = doc(db, "users", user.uid);
             const docSnap = await getDoc(docRef);
@@ -30,10 +29,9 @@ function Profile() {
               console.log(error);
           }
         }
-        };
+       } ) 
         return () => userProfile();
-        }
-        )
+})
   return (
     <div className="page-container">
       <div className="menu-container">
