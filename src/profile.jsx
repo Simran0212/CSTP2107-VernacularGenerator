@@ -13,23 +13,24 @@ function Profile() {
   const [pinNumber, setpinNumber] = useState(0);
 
   useEffect( ()=> {
-      const userProfile = onAuthStateChanged(auth, async (currentUser) => 
-        { try {
-          const userInformation = doc(db, "users", currentUser.uid);
+      const userProfile = onAuthStateChanged(auth, async (currentUser) => {
+         if(currentUser){
+          try{
+            const userInformation = doc(db, "users", currentUser.uid);
             const user = await getDoc(userInformation);
             if(user.exists()){
                 setuserData(user.data())
-            }
-        if(currentUser){
+            } 
+          
             setboardNumber(0);
             setpinNumber(0);
-        } }
+          }
       catch(error){
               console.log(error);
-          }
+          } }
         return () => userProfile();
         }
-        )})
+      )})
     
   return (
     <div className="page-container">
