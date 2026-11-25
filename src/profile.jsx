@@ -23,11 +23,11 @@ function Profile() {
             if(docSnap.exists()){
                 setuserData(docSnap.data())
             }
-            const boardsQuery = query(collection(db, "boards"), where("userId" === currentUser.uid));
+            const boardsQuery = query(collection(db, "boards"), where("userId", "===", currentUser.uid));
             const boardsSize = await getDocs(boardsQuery);
             setboardNumber(boardsSize.size);
 
-            const pinsQuery = query(collection(db, "pins"), where("userId" === currentUser.uid));
+            const pinsQuery = query(collection(db, "pins"), where("userId", "===" ,currentUser.uid));
             const pinSize = await getDocs(pinsQuery);
             setpinNumber(pinSize.size);
 
@@ -63,7 +63,7 @@ function Profile() {
             <img src = {userData?.photoURL} alt = "Profile photo does not exist"></img>
             <br></br>
             <br></br>
-          <p>{auth.currentUser?.displayName || auth.currentUser?.email}</p>
+          <p>{auth.currentUser?.displayName}</p>
             <br></br>
           </div>
           <ul>
