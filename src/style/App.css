@@ -309,7 +309,7 @@ input[type=file] {
   color: light-dark(var(--white), var(--black));
 }
 
-.noun {
+.noun, .pronoun{
   color: light-dark( var(--black), var(--white));
   background-color: light-dark(var(--light-blue), var(--blue));
 }

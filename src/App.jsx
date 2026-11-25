@@ -13,6 +13,7 @@ import Signup from './signup'
 import CreateBoard from './createBoard'
 import Profile from './profile'
 import CreatePassword from './createPassword'
+import NotFoundPage from './notFoundPage'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/create-board" element={<CreateBoard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/createpassword" element={<CreatePassword />} />
+          <Route path='/*' element={<NotFoundPage/>}/>
         </Routes>
       </BrowserRouter>
     </>
