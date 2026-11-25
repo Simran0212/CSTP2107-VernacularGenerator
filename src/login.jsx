@@ -50,11 +50,6 @@ function Login(){
   }
   return (
   <div className="login-screen-container">
-    <div className="background">
-      <div className="shape"></div>
-      <div className="shape"></div>  
-      <div className="shape"></div>
-    </div>
   <form className="log-form">
     <h1>Welcome to Vernacular Generator</h1>
 
