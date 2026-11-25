@@ -17,7 +17,7 @@ const menu = () => {
   return (
     <>
     <nav className="menu">
-        <a href="/" className="menu-item">Logo</a>
+        <a href="/dashboard" className="menu-item">Logo</a>
         <a href="/dashboard" className="menu-item">Dashboard</a>
         <a href="/settings" className="menu-item">Settings</a>
         <a href="/create-board" className="menu-item">Create</a>
