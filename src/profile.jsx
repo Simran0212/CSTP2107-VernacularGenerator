@@ -16,9 +16,9 @@ function Profile() {
       const userProfile = onAuthStateChanged(auth, async (currentUser) => 
         { try {
           const userInformation = doc(db, "users", currentUser.uid);
-            //const user = await getDoc(userInformation);
-            if(userInformation.exists()){
-                setuserData(userInformation.data())
+            const user = await getDoc(userInformation);
+            if(user.exists()){
+                setuserData(user.data())
             }
         if(currentUser){
             setboardNumber(0);
