@@ -66,15 +66,6 @@ function changePassword() {
                 <br></br>
               <button className="changePassword" onClick={changePassword}>Change password</button>
              </div>
-              <br></br>
-              <button className="changeEmail">Change email</button>  
-              <br></br>
-              <br></br>
-            <ul>
-              <li>Change username</li>
-              <li>Change profile picture</li>
-              </ul>
-            Need to decide on what other settings to impliment as a group.
         </div>
       </div>
         </div>
