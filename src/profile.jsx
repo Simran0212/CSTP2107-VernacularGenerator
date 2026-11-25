@@ -16,20 +16,18 @@ function Profile() {
   useEffect( ()=> {
       const userProfile = onAuthStateChanged(auth, async (currentUser) => 
         {
+          try {
         if(currentUser){
             setboardNumber(0);
             setpinNumber(0);
-        }
-   } catch(error){
+        }}
+     catch(error){
               console.log(error);
           }
-          finally {
-            setpageState(false);
-          }
-        }
         return () => userProfile();
-      },
-    )})
+        }
+        )}
+      )}
   return (
     <div className="page-container">
       <div className="menu-container">
@@ -65,6 +63,5 @@ function Profile() {
       </div>
     </div>
   )
-}
 
 export default Profile
