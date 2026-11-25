@@ -1,9 +1,7 @@
 import React, { useEffect , useState} from 'react'
-// i.	Word + Definition using imput fields
 const URL = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
 
 const SingleWord = ( {word} ) => {
-  //const {keyword} = word;
   const [definition, setDefinition] = useState(null);
   const [type, setType] = useState(null);
   const [varieties, setVarieties] = useState(null);
@@ -20,8 +18,8 @@ const SingleWord = ( {word} ) => {
           setVarieties(data[0].meanings.length);
         } else {
           setDefinition("Definition not found");
-          setType("N/A");
-          setVarieties("N/A");
+          setType("NA");
+          setVarieties("NA");
         }
         
         //console.log(definition);
@@ -31,10 +29,10 @@ const SingleWord = ( {word} ) => {
     };
 
     fetchWord();
-  }, [word]);
+  }, [word]); 
 
-  if (!word) {
-    <div className="word-box">
+  if (!word || definition == "Definition not found") {
+    <div className="word-box" style="display:none">
       <p>Finding Definition</p>
     </div>
   }
@@ -42,7 +40,9 @@ const SingleWord = ( {word} ) => {
   return (
     <div className="word-box">
       <h3>{word}</h3>
+      <div className={type+" WordClass"}>{type}</div>
       <p>{definition}</p>
+      <div className='moreButton'></div>
     </div>
   )
 }

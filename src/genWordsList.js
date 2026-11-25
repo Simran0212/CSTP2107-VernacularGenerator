@@ -1,4 +1,6 @@
 import dictionaryJSON from './data/dictionary.json';
+const dictionary = [];
+fillDictionary();
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -10,9 +12,6 @@ function fillDictionary() {
         dictionary.push(key);
     }
 }
-
-const dictionary = [];
-fillDictionary();
 
 export const getRanWordList = (listLen) => {
     const wordList = [];

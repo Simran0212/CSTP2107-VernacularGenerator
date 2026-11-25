@@ -303,3 +303,23 @@ input[type=file] {
   row-gap: 10px;
   min-height: 100vh; /* smallest height it can go else add scroll */
 }
+
+.WordClass {
+  background-color: light-dark(var(--black), var(--white));
+  color: light-dark(var(--white), var(--black));
+}
+
+.noun {
+  color: light-dark( var(--black), var(--white));
+  background-color: light-dark(var(--light-blue), var(--blue));
+}
+
+.verb, .adverb {
+  color: light-dark( var(--black), var(--white));
+  background-color: light-dark(var(--light-red), var(--red));
+}
+
+.adjective {
+  color: light-dark( var(--black), var(--white));
+  background-color: light-dark(var(--light-green), var(--green));
+}
