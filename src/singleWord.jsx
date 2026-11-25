@@ -1,5 +1,4 @@
-import React, { use, useEffect , useState} from 'react'
-import { data } from 'react-router-dom';
+import React, { useEffect , useState} from 'react'
 // i.	Word + Definition using imput fields
 const URL = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
 

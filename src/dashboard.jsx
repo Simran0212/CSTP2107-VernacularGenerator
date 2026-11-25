@@ -1,4 +1,3 @@
-import React from 'react'
 import Menu from './menu'
 import SearchBar from "./searchBar";
 import WordsDisplay from './wordsDisplay';
