@@ -17,19 +17,8 @@ function Profile() {
       const userProfile = onAuthStateChanged(auth, async (currentUser) => 
         {
         if(currentUser){
-          try{
-            const docRef = doc(db, "users", currentUser.uid);
-            const docSnap = await getDoc(docRef);
-            if(docSnap.exists()){
-                setuserData(docSnap.data())
-            }
-            const boardsQuery = query(collection(db, "boards"), where("userId" == currentUser.uid));
-            const boardsSize = await getDocs(boardsQuery);
-            setboardNumber(boardsSize.size);
-
-            const pinsQuery = query(collection(db, "pins"), where("userId" == currentUser.uid));
-            const pinSize = await getDocs(pinsQuery);
-            setpinNumber(pinSize.size);
+            setboardNumber(0);
+            setpinNumber(0);
 
    } catch(error){
               console.log(error);
