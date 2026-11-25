@@ -12,26 +12,28 @@ function Profile() {
   const [boardNumber, setboardNumber] = useState(0);
   const [pinNumber, setpinNumber] = useState(0);
 
-  useEffect( ()=> {
-      const userProfile = onAuthStateChanged(auth, async (currentUser) => {
-         if(currentUser){
+   useEffect( ()=> {
+      const userProfile = async () => 
+      { 
+        const user = auth.currentUser
+        if(user){
           try{
-            const userInformation = doc(db, "users", currentUser.uid);
-            const user = await getDoc(userInformation);
-            if(user.exists()){
-                setuserData(user.data())
-            } 
-          
+            const docRef = doc(db, "users", user.uid);
+            const docSnap = await getDoc(docRef);
+            if(docSnap.exists()){
+                setuserData(docSnap.data())
+            }
             setboardNumber(0);
             setpinNumber(0);
-          }
-      catch(error){
+
+          } catch(error){
               console.log(error);
-          } }
+          }
+        }
+        };
         return () => userProfile();
         }
-      )})
-    
+        )
   return (
     <div className="page-container">
       <div className="menu-container">
