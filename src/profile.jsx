@@ -31,18 +31,16 @@ function Profile() {
             const pinSize = await getDocs(pinsQuery);
             setpinNumber(pinSize.size);
 
-          } catch(error){
+   } catch(error){
               console.log(error);
           }
           finally {
             setpageState(false);
           }
-        } return () => userProfile();
-        });
-      if(pageState){
-        return <p>Profile is Loading..</p>;
-      }
-    })
+        }
+        return () => userProfile();
+      },
+    )})
   return (
     <div className="page-container">
       <div className="menu-container">
