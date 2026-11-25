@@ -12,9 +12,9 @@ function Profile() {
   const [boardNumber, setboardNumber] = useState(0);
   const [pinNumber, setpinNumber] = useState(0);
 
-   useEffect( ()=> {
-      const userProfile = onAuthStateChanged(auth, async (currentUser) => 
-      { 
+  useEffect( ()=> {
+        const userProfile = onAuthStateChanged(auth, async (currentUser) => 
+      {
         if(currentUser){
           try{
             const userInformation = doc(db, "users", currentUser.uid);
@@ -22,16 +22,18 @@ function Profile() {
             if(user.exists()){
                 setuserData(user.data())
             }
-            setboardNumber(0);
-            setpinNumber(0);
+        
+            setboardNumber("0");
+
+            setpinNumber("0");
 
           } catch(error){
               console.log(error);
           }
         }
-       } ) 
-        return () => userProfile();
-})
+        });
+       return () => userProfile();
+   })
   return (
     <div className="page-container">
       <div className="menu-container">
