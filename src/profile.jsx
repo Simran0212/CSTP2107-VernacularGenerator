@@ -4,7 +4,7 @@ import SearchBar from "./searchBar";
 import {auth} from "./firebase.config";
 import {db} from "./firebase.config";
 import  { useState, useEffect } from 'react';
-import { doc, getDoc, collection, query, where, getDocs } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import {onAuthStateChanged} from 'firebase/auth';
 
 function Profile() {
@@ -15,6 +15,11 @@ function Profile() {
   useEffect( ()=> {
       const userProfile = onAuthStateChanged(auth, async (currentUser) => 
         { try {
+          const userInformation = doc(db, "users", currentUser.uid);
+            //const user = await getDoc(userInformation);
+            if(userInformation.exists()){
+                setuserData(userInformation.data())
+            }
         if(currentUser){
             setboardNumber(0);
             setpinNumber(0);
