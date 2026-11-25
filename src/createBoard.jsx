@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import Menu from './menu'
 import SearchBar from "./searchBar";
+import { addBoard, getBoards } from './boards'
+import SingleBoard from './singleBoard'
 
 const createBoard = () => {
   const [isCreatingFromScratch, setIsCreatingFromScratch] = useState(false);
   const [boardName, setBoardName] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [boards, setBoards] = useState(getBoards());
 
   const handleStartCreate = () => {
     setIsCreatingFromScratch(true);
@@ -24,7 +27,8 @@ const createBoard = () => {
       setErrorMessage("Please enter a board name.");
       return;
     }
-    console.log("New board:", trimmedBoardName); // placeholder until storage is decided
+    addBoard(trimmedBoardName);
+    setBoards(getBoards());
     handleCancelCreate();
   };
 
@@ -67,6 +71,12 @@ const createBoard = () => {
           ) : (
             <button className="button blue" onClick={handleStartCreate}>Create from Scratch</button>
           )}
+          <h2>Your boards</h2>
+            <div className="boards-container">
+              {boards.map((board) => (
+                <SingleBoard key={board.id} board={board} />
+              ))}
+            </div>
         </div>
       </div>
     </div>

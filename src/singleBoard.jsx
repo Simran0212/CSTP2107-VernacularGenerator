@@ -1,9 +1,24 @@
 import React from 'react'
-// gives a preview of a board with imputted words list
+import './singleBoard.css'
+// gives a preview of a board with inputted words list
 
-const singleBoard = () => {
+const MAX_PREVIEW_WORDS = 4;
+
+const singleBoard = ({ board }) => {
+  const words = board.words || [];
+  const previewWords = words.slice(0, MAX_PREVIEW_WORDS);
+  const hasMoreWords = words.length > MAX_PREVIEW_WORDS;
+
   return (
-    <div>singleBoard</div>
+    <div className="word-box board-card">
+      <h3>{board.name}</h3>
+      {previewWords.length > 0 ? (
+        <p>{previewWords.join(", ")}{hasMoreWords ? ", ..." : ""}</p>
+      ) : (
+        <p>No words yet</p>
+      )}
+      <p>{words.length} {words.length === 1 ? "word" : "words"}</p>
+    </div>
   )
 }
 
