@@ -42,7 +42,7 @@ function Profile() {
       if(pageState){
         return <p>Profile is Loading..</p>;
       }
-    
+    })
   return (
     <div className="page-container">
       <div className="menu-container">
