@@ -17,10 +17,10 @@ function Profile() {
       { 
         if(currentUser){
           try{
-            const docRef = doc(db, "users", user.uid);
-            const docSnap = await getDoc(docRef);
-            if(docSnap.exists()){
-                setuserData(docSnap.data())
+            const userInformation = doc(db, "users", currentUser.uid);
+            const user = await getDoc(userInformation);
+            if(user.exists()){
+                setuserData(user.data())
             }
             setboardNumber(0);
             setpinNumber(0);
