@@ -23,11 +23,11 @@ function Profile() {
             if(docSnap.exists()){
                 setuserData(docSnap.data())
             }
-            const boardsQuery = query(collection(db, "boards"), where("userId", "==", currentUser.uid));
+            const boardsQuery = query(collection(db, "boards"), where("userId" === currentUser.uid));
             const boardsSize = await getDocs(boardsQuery);
             setboardNumber(boardsSize.size);
 
-            const pinsQuery = query(collection(db, "pins"), where("userId", "==", currentUser.uid));
+            const pinsQuery = query(collection(db, "pins"), where("userId" === currentUser.uid));
             const pinSize = await getDocs(pinsQuery);
             setpinNumber(pinSize.size);
 
