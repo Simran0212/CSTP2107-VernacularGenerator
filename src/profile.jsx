@@ -11,23 +11,21 @@ function Profile() {
   const [userData, setuserData] = useState(null);
   const [boardNumber, setboardNumber] = useState(0);
   const [pinNumber, setpinNumber] = useState(0);
-  const [pageState, setpageState] = useState(true);
 
   useEffect( ()=> {
       const userProfile = onAuthStateChanged(auth, async (currentUser) => 
-        {
-          try {
+        { try {
         if(currentUser){
             setboardNumber(0);
             setpinNumber(0);
-        }}
-     catch(error){
+        } }
+      catch(error){
               console.log(error);
           }
         return () => userProfile();
         }
-        )}
-      )}
+        )})
+    
   return (
     <div className="page-container">
       <div className="menu-container">
@@ -63,5 +61,6 @@ function Profile() {
       </div>
     </div>
   )
+}
 
 export default Profile
